@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-for ascii_code in range(ord('a'), ord('z') + 1):
-    print(f"{chr(ascii_code)}", end="")
+
+"""Print the alphabet in lowercase, not followed by a new line."""
+for ascii_alph in range(97, 123):
+    print("{}".format(chr(ascii_alph)), end="")
