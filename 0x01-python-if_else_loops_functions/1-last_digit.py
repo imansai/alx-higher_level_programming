@@ -25,3 +25,4 @@ else:
     elif int_last_num > 5:
         print(f"Last digit of {number} is {int_last_num} "
               "and is greater than 5")
+
