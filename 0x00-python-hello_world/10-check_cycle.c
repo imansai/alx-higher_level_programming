@@ -1,19 +1,26 @@
 #include "lists.h"
 
-int check_cycle(listint_t *list) {
-    if (list == NULL)
-        return 0;
+/**
+ * check_cycle - linked list cycle checker
+ * @list: linked list to be checked
+ *
+ * Return: 1 if it's true, 0 if it's false
+ */
+int check_cycle(listint_t *list)
+{
+	listint_t *slow = list;
+	listint_t *fast = list;
 
-    listint_t *slow = list;
-    listint_t *fast = list->next;
+	if (!list)
+		return (0);
 
-    while (fast && fast->next) {
-        if (slow == fast)
-            return 1;
+	while (slow && fast && fast->next)
+	{
+		slow = slow->next;
+		fast = fast->next->next;
+		if (slow == fast)
+			return (1);
+	}
 
-        slow = slow->next;
-        fast = fast->next->next;
-    }
-
-    return 0;
+	return (0);
 }
