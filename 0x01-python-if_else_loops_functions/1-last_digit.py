@@ -10,19 +10,14 @@ if number >= 0:
     if int_last_num == 0:
         print(f"Last digit of {number} is {int_last_num} and is 0")
     elif int_last_num < 6 and int_last_num != 0:
-        print(f"Last digit of {number} is {int_last_num} "
-              "and is less than 6 and not 0")
+        print(f"Last digit of {number} is {int_last_num} and is less than 6 and not 0")
     elif int_last_num > 5:
-        print(f"Last digit of {number} is {int_last_num} "
-              "and is greater than 5")
+        print(f"Last digit of {number} is {int_last_num} and is greater than 5")
 else:
     int_last_num *= -1
     if int_last_num == 0:
         print(f"Last digit of {number} is {int_last_num} and is 0")
     elif int_last_num < 6 and int_last_num != 0:
-        print(f"Last digit of {number} is {int_last_num} "
-              "and is less than 6 and not 0")
+        print(f"Last digit of {number} is {int_last_num} and is less than 6 and not 0")
     elif int_last_num > 5:
-        print(f"Last digit of {number} is {int_last_num} "
-              "and is greater than 5")
-
+        print(f"Last digit of {number} is {int_last_num} and is greater than 5")
