@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-for char_code in range(97, 123):
-    print(chr(char_code), end='')
+for ascii_code in range(97, 123):
+    print("{0}".format(chr(ascii_code)), end="")
