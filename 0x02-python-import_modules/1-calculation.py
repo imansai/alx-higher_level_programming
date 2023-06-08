@@ -9,7 +9,7 @@ if __name__ == "__main__":
     result_add = a + b
     result_sub = a - b
     result_mul = a * b
-    result_div = a // b
+    result_div = a / b
 
     print("{} + {} = {}".format(a, b, result_add))
     print("{} - {} = {}".format(a, b, result_sub))
