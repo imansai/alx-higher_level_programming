@@ -11,7 +11,7 @@ if __name__ == "__main__":
     mul_result = mul(a, b)
     div_result = div(a, b)
 
-    print("Addition:", add_result)
-    print("Subtraction:", sub_result)
-    print("Multiplication:", mul_result)
-    print("Division:", div_result)
+    print(add_result)
+    print(sub_result)
+    print(mul_result)
+    print(div_result)
