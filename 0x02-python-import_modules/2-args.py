@@ -2,14 +2,14 @@
 if __name__ == "__main__":
     import sys
 
-    args = sys.argv[1:]  # Exclude the script name from the arguments
+    count = len(sys.argv) - 1
 
-    num_args = len(args)
-    print("Number of argument(s):", num_args)
-
-    if num_args == 0:
-        print(".")
+    if count == 0:
+        print("0 arguments.")
+    elif count == 1:
+        print("1 argument:")
+        print("1:", sys.argv[1])
     else:
-        print("Arguments:")
-        for i, arg in enumerate(args, start=1):
-            print(f"{i}: {arg}")
+        print("{} arguments:".format(count))
+        for i in range(1, count + 1):
+            print("{}: {}".format(i, sys.argv[i]))
