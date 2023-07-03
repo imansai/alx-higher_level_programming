@@ -5,7 +5,11 @@
 class Rectangle:
     """ Represent a rectangle"""
     def __init__(self, width=0, height=0):
-        """Initialize object with optional width and height."""
+        """Initialize object with optional width and height.
+        Args:
+            width(int): Width of the retangle.
+            height(int): Height of the rectangle.
+        """
         self.width = width
         self.height = height
 
