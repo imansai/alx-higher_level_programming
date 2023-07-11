@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-def write_file(filename="", text=""):
+def read_file(filename=""):
     """
-    Write the given text to a file with the specified filename.
+    Read the contents of the given text file (UTF8) and print it to stdout.
 
     Args:
-        filename (str): The name of the file to write to.
-        text (str): The content to write to the file.
+        filename (str): The name of the file to read.
 
-    Raises:
-        IOError: If there is an error while writing to the file.
+    Returns:
+        None
     """
-	with open(filename, 'w', encoding='utf8') as file:
-	file.write(text)
+    with open(filename, 'w', encoding='utf8') as file:
+        for line in file:
+            print(line, end='')
