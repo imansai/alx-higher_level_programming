@@ -1,25 +1,24 @@
 #!/usr/bin/node
 
 const request = require('request');
-const filmId = process.argv[2];
-const filmsApiUrl = 'https://swapi-api.hbtn.io/api/films/';
-
-request.get(filmsApiUrl + filmId, function (errorFilm, responseFilm, bodyFilm) {
-  if (errorFilm) {
-    console.log('Error fetching film details:', errorFilm);
+const movieId = process.argv[2];
+const apiUrl = 'https://swapi.dev/api/films/';
+request.get(apiUrl + movieId, function (filmError, filmResponse, filmBody) {
+  if (filmError) {
+    console.log('Error fetching film details:', filmError);
   } else {
-    const filmDetails = JSON.parse(bodyFilm);
-    const charactersUrls = filmDetails.characters;
-
-    charactersUrls.forEach(function (characterUrl) {
-      request.get(characterUrl, function (errorCharacter, responseCharacter, bodyCharacter) {
-        if (errorCharacter) {
-          console.log('Error fetching character details:', errorCharacter);
+    const filmData = JSON.parse(filmBody);
+    const characterUrls = filmData.characters;
+    characterUrls.forEach(function (characterUrl) {
+      request.get(characterUrl, function (charError, charResponse, charBody) {
+        if (charError) {
+          console.log('Error fetching character details:', charError);
         } else {
-          const characterDetails = JSON.parse(bodyCharacter);
-          console.log('Character Name:', characterDetails.name);
+          const characterData = JSON.parse(charBody);
+          console.log('Character Name:', characterData.name);
         }
       });
     });
   }
 });
+
