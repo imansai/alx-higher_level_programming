@@ -1,5 +1,4 @@
 #!/usr/bin/node
 const fs = require('fs');
-fs.readFile(process.argv[2], 'utf8', function (error, content) {
-  console.log(error || content);
-});
+const request = require('request');
+request(process.argv[2]).pipe(fs.createWriteStream(process.argv[3]));
