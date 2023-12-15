@@ -2,7 +2,7 @@
 """A script that:
 - first takes a URL,
 - then sends a request to that URL and shows the value
-- of the X-Request-Id variable found in the response header.
+- of the X-Request-Id variable in response header.
 """
 import sys
 import urllib.request
